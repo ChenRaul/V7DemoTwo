@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Toobar主要是用来替换ActionBar的,要使用toolbar,就必须把actionBar隐藏掉
+		此处就是将MainActivityManifest中的theme属性设置为 Theme.DesignDemo；
+		而Theme.DesignDemo的parent（相当于继承）就是Base.Theme.DesignDemo，
+		而Base.Theme.DesignDemo的parent就是Theme.AppCompat.Light.NoActionBar；
+		Theme.AppCompat.Light.NoActionBar就会将actionBar隐藏掉
+	-->
+    <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
+    </style>
+
+    <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#0fb73d</item>
+        <item name="colorPrimaryDark">#0ba823</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+</resources>

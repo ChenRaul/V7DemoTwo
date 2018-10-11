@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dip"
+    android:padding="5dip"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="120dp"
+                android:layout_height="70dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_bg"
+                android:textColor="#FFFFFF"
+                android:text="点赞"/>
+        </LinearLayout>
+<!-- LinearLayoutCompat其实就是LinerLayout组件，只是为了兼容低版本，所以你必须的引用 V7包下面的LinearLayoutCompat。 LinearLayoutCompat除了拥有LinerLayout原本的属性之外，主要有如下几种属性来实现 间隔线效果。
+
+app:divider=”@drawable/line” 给分隔线设置颜色，这里你需要在drawable在定义shape资源，否则将没有效果。看下面
+app:dividerPadding=”25dp” 给分隔线设置距离左右边距的距离。
+app:showDividers=”middle|beginning|end” 分隔线显示的位置，有四种参数值：middle 每个item之间，beginning最顶端显示分隔线，end 最底端显示分隔线，none不显示间隔线。
+注意 这三个属性需要使用 xmlns:app=”http://schemas.android.com/apk/res-auto” 命名空间 -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            app:divider="@drawable/linearlayoutcompat_divider_shape"
+            app:dividerPadding="10dip"
+            app:showDividers="middle|beginning|end"
+            >
+
+            <TextView
+                android:id="@+id/item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="美文"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="订阅数：4000000"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="故事，启迪你的人生；美文，陶冶你的情操，有声朗读，洗礼你的耳朵……"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="10-11"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
